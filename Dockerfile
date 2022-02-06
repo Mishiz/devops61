@@ -18,8 +18,6 @@ RUN mkdir /home/boxfuse \
     && mvn package \
     && cp *.war /home/tomcat/apache-tomcat-9.0.58/webapps/
 
-
-
 EXPOSE 8080
 CMD ["/home/tomcat/apache-tomcat-9.0.58/bin/catalina.sh", "run"]
 
