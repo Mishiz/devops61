@@ -6,6 +6,6 @@ RUN mkdir /home/boxfuse \
     && git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git \
     && cd ./boxfuse-sample-java-war-hello \
     && mvn package \
-    && cp ./target/*.war ~/webapps/
+    && cp ./target/*.war /usr/local/tomcat/webapps/
 
 
