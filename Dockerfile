@@ -19,4 +19,5 @@ RUN mkdir ./tomcat \
 
 
 EXPOSE 8080
-#CMD ["./apache-tomcat-9.0.58/bin/catalina.sh", "run"]
+CMD ["./apache-tomcat-9.0.58/bin/catalina.sh", "run"]
+
