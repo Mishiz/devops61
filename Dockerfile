@@ -11,10 +11,11 @@ RUN mkdir /home/tomcat \
     && wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.58/bin/apache-tomcat-9.0.58.tar.gz \
     && tar -xzvf apache-tomcat-9.0.58.tar.gz
 
-
-
-
-
+RUN mkdir /home/boxfuse \
+    && cd /home/boxfuse \
+    && git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git \
+    && mvn package \
+    && cp *.war /home/tomcat/apache-tomcat-9.0.58/webapps/
 
 
 
