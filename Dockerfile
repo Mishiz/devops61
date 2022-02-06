@@ -16,7 +16,7 @@ RUN mkdir /home/boxfuse \
     && git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git \
     && cd ./boxfuse-sample-java-war-hello \
     && mvn package \
-    && cp *.war /home/tomcat/apache-tomcat-9.0.58/webapps/
+    && cp ./target/*.war /home/tomcat/apache-tomcat-9.0.58/webapps/
 
 EXPOSE 8080
 CMD ["/home/tomcat/apache-tomcat-9.0.58/bin/catalina.sh", "run"]
