@@ -14,7 +14,7 @@ RUN mkdir /home/tomcat \
 RUN mkdir /home/boxfuse \
     && cd /home/boxfuse \
     && git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git \
-    && cd ./boxfuse-sample-java-war-hello/
+    && cd ./boxfuse-sample-java-war-hello \
     && mvn package \
     && cp *.war /home/tomcat/apache-tomcat-9.0.58/webapps/
 
