@@ -3,7 +3,8 @@ RUN apt-get update \
     && apt-get -y full-upgrade \
     && apt-get install -y default-jdk \
     && apt-get install -y git \
-    && apt-get install -y maven
+    && apt-get install -y maven \
+    && apt-get install -y  wget
 
 RUN mkdir ./tomcat \
     && cd ./tomcat \
