@@ -6,8 +6,8 @@ RUN apt-get update \
     && apt-get install -y maven \
     && apt-get install -y  wget
 
-RUN mkdir ./tomcat \
-    && cd ./tomcat \
+RUN mkdir /home/tomcat \
+    && cd /home/tomcat \
     && wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.58/bin/apache-tomcat-9.0.58.tar.gz \
     && tar -xzvf apache-tomcat-9.0.58.tar.gz
 
@@ -19,5 +19,5 @@ RUN mkdir ./tomcat \
 
 
 EXPOSE 8080
-CMD ["./apache-tomcat-9.0.58/bin/catalina.sh", "run"]
+CMD ["/home/tomcat/apache-tomcat-9.0.58/bin/catalina.sh", "run"]
 
